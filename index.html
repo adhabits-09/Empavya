@@ -330,27 +330,27 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 <div class="skill-selector-title">Select 1 Skill (Rs.999)</div>
 <div class="skill-select-grid">
 <div class="skill-select-item" data-skill="candle" onclick="selectSkill(this, 'candle')">
-<img src="candel.jpeg" alt="Candle">
+<img src="https://i.ibb.co/HfHhM0c4/candel.jpg" alt="Candle">
 <span>Candle</span>
 </div>
 <div class="skill-select-item" data-skill="chocolate" onclick="selectSkill(this, 'chocolate')">
-<img src="choklet.jpeg" alt="Chocolate">
+<img src="https://i.ibb.co/vt1VRkV/choklet.jpg" alt="Chocolate">
 <span>Chocolate</span>
 </div>
 <div class="skill-select-item" data-skill="mehendi" onclick="selectSkill(this, 'mehendi')">
-<img src="mehndi.jpeg" alt="Mehendi">
+<img src="https://i.ibb.co/23X8zhcd/mehndi.jpg" alt="Mehendi">
 <span>Mehendi</span>
 </div>
 <div class="skill-select-item" data-skill="snacks" onclick="selectSkill(this, 'snacks')">
-<img src="snaks.jpeg" alt="Snacks">
+<img src="https://i.ibb.co/qY4QmM0F/snaks.jpg" alt="Snacks">
 <span>Snacks</span>
 </div>
 <div class="skill-select-item" data-skill="soap" onclick="selectSkill(this, 'soap')">
-<img src="sop.jpeg" alt="Soap">
+<img src="https://i.ibb.co/wrdtFXhN/sop.jpg" alt="Soap">
 <span>Soap</span>
 </div>
 <div class="skill-select-item" data-skill="tailoring" onclick="selectSkill(this, 'tailoring')">
-<img src="tailering.jpeg" alt="Tailoring">
+<img src="https://i.ibb.co/prB3HqwP/tailering.jpg" alt="Tailoring">
 <span>Tailoring</span>
 </div>
 </div>
@@ -514,7 +514,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 </div>
 <div class="courses-grid fade-in">
 <div class="course-card">
-<img src="candel.jpeg" alt="Candle Business" class="course-image">
+<img src="https://i.ibb.co/HfHhM0c4/candel.jpg" alt="Candle Business" class="course-image">
 <div class="course-body">
 <span class="course-tag">High Demand</span>
 <h3 class="course-name">Candle Making Business</h3>
@@ -523,7 +523,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 </div>
 </div>
 <div class="course-card">
-<img src="choklet.jpeg" alt="Chocolate Business" class="course-image">
+<img src="https://i.ibb.co/vt1VRkV/choklet.jpg" alt="Chocolate Business" class="course-image">
 <div class="course-body">
 <span class="course-tag">High Demand</span>
 <h3 class="course-name">Chocolate Making Business</h3>
@@ -532,7 +532,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 </div>
 </div>
 <div class="course-card">
-<img src="mehndi.jpeg" alt="Mehendi Business" class="course-image">
+<img src="https://i.ibb.co/23X8zhcd/mehndi.jpg" alt="Mehendi Business" class="course-image">
 <div class="course-body">
 <span class="course-tag">High Demand</span>
 <h3 class="course-name">Mehendi Designing Business</h3>
@@ -541,7 +541,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 </div>
 </div>
 <div class="course-card">
-<img src="snaks.jpeg" alt="Snacks Business" class="course-image">
+<img src="https://i.ibb.co/qY4QmM0F/snaks.jpg" alt="Snacks Business" class="course-image">
 <div class="course-body">
 <span class="course-tag">High Demand</span>
 <h3 class="course-name">Snacks Making Business</h3>
@@ -550,7 +550,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 </div>
 </div>
 <div class="course-card">
-<img src="sop.jpeg" alt="Soap Business" class="course-image">
+<img src="https://i.ibb.co/wrdtFXhN/sop.jpg" alt="Soap Business" class="course-image">
 <div class="course-body">
 <span class="course-tag">High Demand</span>
 <h3 class="course-name">Soap Making Business</h3>
@@ -559,7 +559,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 </div>
 </div>
 <div class="course-card">
-<img src="tailering.jpeg" alt="Tailoring Business" class="course-image">
+<img src="https://i.ibb.co/prB3HqwP/tailering.jpg" alt="Tailoring Business" class="course-image">
 <div class="course-body">
 <span class="course-tag">High Demand</span>
 <h3 class="course-name">Tailoring & Boutique Business</h3>
@@ -745,7 +745,6 @@ let selectedSingleSkill=null;
 function openEnrollPopup(){
 enrollPopup.classList.add('active');
 document.body.style.overflow='hidden';
-// Track event
 if(typeof fbq!=='undefined') fbq('track','Contact');
 }
 function closeEnrollPopup(){
@@ -765,7 +764,6 @@ if(plan==='single') document.getElementById('planSingle').classList.add('selecte
 }
 
 function payAllSkills(){
-// Track and redirect to Rs.1499 payment
 if(typeof fbq!=='undefined') fbq('track','Contact',{content_name:'All 6 Skills',value:1499,currency:'INR'});
 window.location.href='https://pages.razorpay.com/empavya';
 }
@@ -784,9 +782,7 @@ document.getElementById('paySingleBtn').disabled=false;
 
 function paySingleSkill(){
 if(!selectedSingleSkill) return;
-// Track and redirect to Rs.999 payment
 if(typeof fbq!=='undefined') fbq('track','Contact',{content_name:'Single Skill: '+selectedSingleSkill,value:999,currency:'INR'});
-// NOTE: Replace this with your actual Rs.999 payment link
 alert('Redirecting to payment for: '+selectedSingleSkill.toUpperCase()+' (Rs.999)\n\nPlease update the payment link in the code for single skill payments.');
 // window.location.href='YOUR_RAZORPAY_999_LINK_HERE';
 }
