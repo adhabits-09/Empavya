@@ -180,29 +180,29 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 /* POPUP */
 .popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity 0.3s ease}
 .popup-overlay.active{display:flex;opacity:1}
-.popup-box{background:var(--bg-white);border-radius:24px;padding:32px 24px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(30px) scale(0.95);transition:transform 0.3s ease;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.popup-box{background:var(--bg-white);border-radius:20px;padding:20px 16px;width:100%;max-width:420px;max-height:85vh;overflow-y:auto;position:relative;transform:translateY(30px) scale(0.95);transition:transform 0.3s ease;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .popup-overlay.active .popup-box{transform:translateY(0) scale(1)}
-.popup-close{position:absolute;top:16px;right:16px;width:36px;height:36px;background:var(--bg-light);border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text-secondary);transition:all 0.2s;z-index:10}
+.popup-close{position:absolute;top:10px;right:10px;width:32px;height:32px;background:var(--bg-light);border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text-secondary);transition:all 0.2s;z-index:10}
 .popup-close:active{background:var(--border-light)}
-.popup-title{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:var(--text-dark);margin-bottom:6px;padding-right:40px}
-.popup-subtitle{font-size:13px;color:var(--text-muted);margin-bottom:24px}
+.popup-title{font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:var(--text-dark);margin-bottom:4px;padding-right:40px}
+.popup-subtitle{font-size:12px;color:var(--text-muted);margin-bottom:16px}
 
 /* PLAN CARDS IN POPUP */
 .plan-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
-.plan-card{border:2px solid var(--border-light);border-radius:16px;padding:20px;cursor:pointer;transition:all 0.25s ease;position:relative}
+.plan-card{border:2px solid var(--border-light);border-radius:14px;padding:14px;cursor:pointer;transition:all 0.25s ease;position:relative}
 .plan-card:hover{border-color:var(--primary-light)}
 .plan-card.selected{border-color:var(--primary);background:linear-gradient(135deg,rgba(102,57,224,0.04) 0%,rgba(159,125,234,0.04) 100%)}
-.plan-card.recommended::before{content:'RECOMMENDED';position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent-orange) 0%,#FF8C42 100%);color:#fff;font-size:10px;font-weight:800;padding:4px 14px;border-radius:20px;letter-spacing:0.5px}
+.plan-card.recommended::before{content:'RECOMMENDED';position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent-orange) 0%,#FF8C42 100%);color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:20px;letter-spacing:0.5px}
 .plan-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.plan-name{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:var(--text-dark)}
-.plan-price{font-size:22px;font-weight:900;color:var(--primary)}
-.plan-price .old-price{font-size:13px;text-decoration:line-through;color:var(--text-muted);margin-right:6px}
+.plan-name{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--text-dark)}
+.plan-price{font-size:18px;font-weight:900;color:var(--primary)}
+.plan-price .old-price{font-size:11px;text-decoration:line-through;color:var(--text-muted);margin-right:4px}
 .plan-features{list-style:none;margin:0;padding:0}
-.plan-features li{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);padding:5px 0}
-.plan-features li svg{width:16px;height:16px;fill:var(--accent-green);min-width:16px}
+.plan-features li{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-secondary);padding:3px 0}
+.plan-features li svg{width:14px;height:14px;fill:var(--accent-green);min-width:14px}
 .plan-features li.cross{color:var(--text-muted)}
 .plan-features li.cross svg{fill:var(--accent-red)}
-.plan-btn{width:100%;margin-top:14px;padding:14px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;border:none;border-radius:12px;font-family:inherit;font-size:15px;font-weight:800;cursor:pointer;transition:all 0.25s}
+.plan-btn{width:100%;margin-top:10px;padding:10px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:all 0.25s}
 .plan-btn:active{transform:scale(0.98)}
 .plan-btn.green{background:linear-gradient(135deg,var(--accent-green) 0%,var(--accent-green-dark) 100%)}
 
@@ -210,14 +210,14 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 .skill-selector{display:none;margin-top:16px;animation:fadeIn 0.3s ease}
 .skill-selector.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.skill-selector-title{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:12px;text-align:center}
-.skill-select-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px}
+.skill-selector-title{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:10px;text-align:center}
+.skill-select-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:12px}
 .skill-select-item{border:2px solid var(--border-light);border-radius:12px;overflow:hidden;cursor:pointer;transition:all 0.2s;text-align:center;background:var(--bg-white)}
 .skill-select-item:hover{border-color:var(--primary-light)}
 .skill-select-item.selected{border-color:var(--primary);box-shadow:0 0 0 3px rgba(102,57,224,0.1)}
-.skill-select-item img{width:100%;height:60px;object-fit:cover;display:block}
-.skill-select-item span{display:block;padding:6px;font-size:11px;font-weight:700;color:var(--text-dark)}
-.pay-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent-green) 0%,var(--accent-green-dark) 100%);color:#fff;border:none;border-radius:14px;font-family:inherit;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 4px 20px rgba(56,202,80,0.3);transition:all 0.25s}
+.skill-select-item img{width:100%;height:48px;object-fit:cover;display:block}
+.skill-select-item span{display:block;padding:4px;font-size:10px;font-weight:700;color:var(--text-dark)}
+.pay-btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--accent-green) 0%,var(--accent-green-dark) 100%);color:#fff;border:none;border-radius:12px;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 4px 20px rgba(56,202,80,0.3);transition:all 0.25s}
 .pay-btn:active{transform:scale(0.98)}
 
 /* PRIVACY & CONTACT POPUPS */
@@ -265,6 +265,7 @@ body{font-family:'Inter','Poppins',-apple-system,BlinkMacSystemFont,sans-serif;b
 .problem-grid{grid-template-columns:repeat(3,1fr)}
 }
 </style>
+<base target="_blank">
 <base target="_blank">
 </head>
 <body>
@@ -783,8 +784,7 @@ document.getElementById('paySingleBtn').disabled=false;
 function paySingleSkill(){
 if(!selectedSingleSkill) return;
 if(typeof fbq!=='undefined') fbq('track','Contact',{content_name:'Single Skill: '+selectedSingleSkill,value:999,currency:'INR'});
-alert('Redirecting to payment for: '+selectedSingleSkill.toUpperCase()+' (Rs.999)\n\nPlease update the payment link in the code for single skill payments.');
-// window.location.href='https://rzp.io/rzp/r0mSEW4';
+window.location.href='https://rzp.io/rzp/r0mSEW4';
 }
 
 // PRIVACY POPUP
