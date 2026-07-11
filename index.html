@@ -752,7 +752,6 @@ function openFormPopup(source){
 sourceInfo.value = source || 'Website';
 formBackdrop.classList.add('active');
 document.body.style.overflow='hidden';
-if(typeof fbq!=='undefined') fbq('track','Contact');
 }
 function closeFormPopup(){
 formBackdrop.classList.remove('active');
@@ -781,12 +780,7 @@ document.querySelectorAll('.faq-item').forEach(item=>{item.classList.remove('act
 if(!isActive){faqItem.classList.add('active')}
 }
 
-// Track all CTA clicks
-document.querySelectorAll('.cta-main, .cta-final, .sticky-bar-btn').forEach(btn=>{
-btn.addEventListener('click',function(){
-if(typeof fbq!=='undefined') fbq('track','Contact');
-});
-});
+// Track all CTA clicks - Contact event handled on form submit only
 
 // Form Submit
 leadForm.addEventListener('submit', (e) => {
